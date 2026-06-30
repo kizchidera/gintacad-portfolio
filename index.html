@@ -11,6 +11,11 @@
   <!-- Font Awesome 6 (free icons) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <style>
+    /* ----- COMPLETELY NEW COLOR PALETTE (60-30-10) -----
+       60% Primary:   #1a4a4a (deep teal)        → headers, main text, primary elements
+       30% Secondary: #f5f0e8 (warm cream)       → backgrounds, cards, soft surfaces
+       10% Highlight: #e07a5f (warm terracotta)  → CTAs, badges, key accents
+    */
     * {
       margin: 0;
       padding: 0;
@@ -19,8 +24,8 @@
 
     body {
       font-family: 'Montserrat', 'Arial', sans-serif;
-      background: #f0f4fa;
-      color: #0a1a2b;
+      background: #f5f0e8;  /* 30% secondary: warm cream */
+      color: #1a4a4a;       /* 60% primary: deep teal */
       padding: 2.8rem 2.2rem;
       min-height: 100vh;
       display: flex;
@@ -32,106 +37,132 @@
       width: 100%;
     }
 
-    /* ----- DARKER BRAND COLOR: #0a2a6a (deep navy blue) ----- */
-    .brand-name span,
+    /* ----- 60% PRIMARY: deep teal (#1a4a4a) applied to ALL icons ----- */
     .brand-contact i,
-    .location-badge,
+    .location-badge i,
     .tagline h2 i,
     .section-title i,
-    .course-icon,
-    .course-price,
+    .course-icon i,
     .course-price i,
     .course-duration i,
     .graphic-highlight .graphic-text i,
-    .footer-note .brand-footer span,
     .footer-note .copy i,
-    .footer-note .contact-foot i {
-      color: #0a2a6a;
+    .footer-note .contact-foot i,
+    .badge-popular i {
+      color: #1a4a4a;
     }
 
-    .brand-contact .location-badge {
-      color: #0a2a6a;
-      border-color: rgba(10, 42, 106, 0.15);
-      background: #e8edf9;
+    /* Override for badge-popular icon to keep it visible on dark bg */
+    .badge-popular i {
+      color: #f5f0e8;
     }
 
-    .course-level.basic {
-      background: #e8edf9;
-      color: #0a2a6a;
-      border-color: #b3c4e0;
+    .brand-name span {
+      color: #1a4a4a;
     }
 
+    .brand-name {
+      color: #1a4a4a;
+    }
+
+    /* ----- 10% HIGHLIGHT: warm terracotta (#e07a5f) for backgrounds & accents ----- */
+    .tagline h2 i {
+      background: #fce8e0;
+    }
+    .section-title i {
+      background: #fce8e0;
+    }
     .course-price {
-      background: #e8edf9;
-      border-color: rgba(10, 42, 106, 0.08);
+      background: #fce8e0;
+      border-color: rgba(224, 122, 95, 0.20);
     }
-
     .course-icon {
-      background: #e8edf9;
+      background: #fce8e0;
     }
     .course-card:hover .course-icon {
-      background: #0a2a6a;
-      color: white;
+      background: #1a4a4a;
     }
-
+    .course-card:hover .course-icon i {
+      color: #fce8e0;
+    }
     .badge-popular {
-      background: #0a2a6a;
-      box-shadow: 0 10px 20px -6px rgba(10, 42, 106, 0.30);
+      background: #d56b4f;
+      box-shadow: 0 10px 20px -6px rgba(224, 122, 95, 0.30);
     }
-
-    .footer-note .brand-footer span {
-      color: #6688cc;
-    }
-    .footer-note .copy i,
-    .footer-note .contact-foot i {
-      color: #6688cc;
-    }
-
-    /* override hover for brand-contact links */
-    .brand-contact a:hover {
-      color: #0a2a6a;
-    }
-
-    /* border-bottom */
-    .brand-header {
-      border-bottom-color: rgba(10, 42, 106, 0.10);
-    }
-
-    /* tagline icon background */
-    .tagline h2 i {
-      background: #e8edf9;
-    }
-
-    /* section title icon */
-    .section-title i {
-      background: #e8edf9;
-    }
-
-    .course-card:hover {
-      border-color: rgba(10, 42, 106, 0.12);
-      box-shadow: 0 40px 70px -16px rgba(10, 42, 106, 0.12);
-    }
-
-    /* brand header, contact badge stays dark */
-    .brand-contact {
-      border-color: rgba(255, 255, 255, 0.8);
-      box-shadow: 0 10px 30px -8px rgba(10, 42, 106, 0.06);
-    }
-
     .graphic-highlight .graphic-text i {
-      background: #e8edf9;
+      background: #fce8e0;
+    }
+    .tagline p span {
+      background: #fce8e0;
+    }
+    .graphic-highlight .graphic-text p span {
+      background: #fce8e0;
+      font-weight: 600;
+    }
+    .brand-contact a:hover {
+      color: #d56b4f;
+    }
+    .footer-note .brand-footer span {
+      color: #f0a68a;
+    }
+    .course-level.intermediate {
+      background: #fce8e0;
+      color: #d56b4f;
+      border-color: #f5d5c8;
+    }
+    .course-level.pro {
+      background: #e0f0f0;
+      color: #1a6a6a;
+      border-color: #b0d0d0;
+    }
+    .course-card:hover {
+      border-color: rgba(224, 122, 95, 0.25);
+      box-shadow: 0 40px 70px -16px rgba(224, 122, 95, 0.10), 0 40px 70px -16px rgba(26, 74, 74, 0.06);
     }
 
+    /* ----- 30% SECONDARY: warm cream (#f5f0e8) used for backgrounds & borders ----- */
+    .brand-contact {
+      border-color: #e8e0d5;
+      background: #faf8f5;
+      box-shadow: 0 10px 30px -8px rgba(26, 74, 74, 0.04);
+    }
+    .brand-contact .location-badge {
+      color: #1a4a4a;
+      border-color: rgba(26, 74, 74, 0.10);
+      background: #f0ece4;
+    }
+    .course-level.basic {
+      background: #f0ece4;
+      color: #1a4a4a;
+      border-color: #d5cec0;
+    }
+    .course-card {
+      background: #faf8f5;
+      border: 1px solid #e8e0d5;
+      box-shadow: 0 20px 40px -12px rgba(26, 74, 74, 0.06), 0 6px 18px rgba(0, 0, 0, 0.01);
+    }
+    .tagline {
+      background: #faf8f5;
+      border: 1px solid #e8e0d5;
+      box-shadow: 0 20px 40px -12px rgba(26, 74, 74, 0.04);
+    }
     .graphic-highlight {
-      border-color: rgba(255, 255, 255, 0.6);
+      background: #faf8f5;
+      border: 1px solid #e8e0d5;
+      box-shadow: 0 20px 40px -16px rgba(26, 74, 74, 0.04);
+    }
+    .brand-header {
+      border-bottom: 1px solid #e8e0d5;
+    }
+    .course-duration {
+      background: #f0ece4;
+      color: #1a4a4a;
+    }
+    .course-meta {
+      border-top: 1px solid #e8e0d5;
     }
 
-    /* location badge */
-    .location-badge i {
-      color: #0a2a6a;
-    }
-
-    /* ----- rest of styling (unchanged, but keep consistent) ----- */
+    /* ----- typography & layout (unchanged) ----- */
     .brand-header {
       display: flex;
       flex-wrap: wrap;
@@ -139,7 +170,6 @@
       align-items: center;
       margin-bottom: 3.2rem;
       padding-bottom: 1.8rem;
-      border-bottom: 1px solid rgba(10, 42, 106, 0.10);
     }
 
     .brand-left {
@@ -152,7 +182,6 @@
       font-size: 2.2rem;
       font-weight: 800;
       letter-spacing: -0.02em;
-      color: #0a1a2b;
       font-family: 'Montserrat', sans-serif;
     }
     .brand-name span {
@@ -164,12 +193,9 @@
       flex-wrap: wrap;
       align-items: center;
       gap: 1.8rem;
-      background: rgba(255, 255, 255, 0.7);
       backdrop-filter: blur(4px);
       padding: 0.6rem 2rem 0.6rem 2rem;
       border-radius: 60px;
-      border: 1px solid rgba(255, 255, 255, 0.8);
-      box-shadow: 0 10px 30px -8px rgba(10, 42, 106, 0.06);
       font-size: 0.95rem;
       font-family: 'Montserrat', sans-serif;
     }
@@ -181,35 +207,29 @@
 
     .brand-contact a {
       text-decoration: none;
-      color: #0a1a2b;
+      color: #1a4a4a;
       font-weight: 600;
       transition: color 0.2s;
     }
-    .brand-contact a:hover { color: #0a2a6a; }
 
     .location-badge {
-      background: #e8edf9;
       padding: 0.3rem 1.4rem;
       border-radius: 40px;
       font-weight: 600;
-      border: 1px solid rgba(10, 42, 106, 0.10);
       font-size: 0.9rem;
     }
 
-    /* tagline */
     .tagline {
-      background: linear-gradient(135deg, #ffffff, #f0f4fc);
       padding: 2.6rem 3rem;
       border-radius: 36px;
       margin-bottom: 3.2rem;
-      box-shadow: 0 20px 40px -12px rgba(10, 42, 106, 0.06);
     }
 
     .tagline h2 {
       font-weight: 700;
       font-size: 2.0rem;
       letter-spacing: -0.02em;
-      color: #0a1a2b;
+      color: #1a4a4a;
       font-family: 'Montserrat', sans-serif;
     }
     .tagline h2 i {
@@ -219,7 +239,7 @@
       font-size: 1.6rem;
     }
     .tagline p {
-      color: #1f3a57;
+      color: #2a5a5a;
       margin-top: 0.6rem;
       font-size: 1.05rem;
       max-width: 740px;
@@ -228,14 +248,11 @@
       font-family: 'Montserrat', sans-serif;
     }
     .tagline p span {
-      background: #e8edf9;
       padding: 0.2rem 0.8rem;
       border-radius: 40px;
       font-weight: 600;
-      color: #0a2a6a;
     }
 
-    /* section title */
     .section-title {
       display: flex;
       align-items: center;
@@ -243,7 +260,7 @@
       margin: 3.6rem 0 2.2rem 0;
       font-weight: 700;
       font-size: 1.8rem;
-      color: #0a1a2b;
+      color: #1a4a4a;
       font-family: 'Montserrat', sans-serif;
     }
     .section-title i {
@@ -254,11 +271,10 @@
     .section-title small {
       font-weight: 400;
       font-size: 1rem;
-      color: #3a5a7a;
+      color: #3a6a6a;
       margin-left: 10px;
     }
 
-    /* course grid */
     .course-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
@@ -266,16 +282,12 @@
     }
 
     .course-card {
-      background: #ffffff;
       border-radius: 32px;
       padding: 2rem 1.8rem 1.8rem 1.8rem;
-      box-shadow: 0 20px 40px -12px rgba(10, 42, 106, 0.08), 0 6px 18px rgba(0, 0, 0, 0.02);
       transition: all 0.35s cubic-bezier(0.2, 0, 0, 1);
-      border: 1px solid rgba(255, 255, 255, 0.3);
       display: flex;
       flex-direction: column;
       position: relative;
-      backdrop-filter: blur(2px);
       animation: fadeUp 0.6s ease forwards;
       opacity: 0;
       transform: translateY(16px);
@@ -283,8 +295,6 @@
 
     .course-card:hover {
       transform: translateY(-10px) scale(1.01);
-      box-shadow: 0 40px 70px -16px rgba(10, 42, 106, 0.12);
-      border-color: rgba(10, 42, 106, 0.08);
     }
 
     .course-icon {
@@ -306,7 +316,7 @@
       font-size: 1.4rem;
       font-weight: 700;
       letter-spacing: -0.02em;
-      color: #0a1a2b;
+      color: #1a4a4a;
       margin-bottom: 0.2rem;
       font-family: 'Montserrat', sans-serif;
     }
@@ -319,8 +329,6 @@
       letter-spacing: 0.5px;
       padding: 0.3rem 1.2rem;
       border-radius: 60px;
-      background: #eef3f9;
-      color: #1f3d5a;
       margin-bottom: 1rem;
       align-self: flex-start;
       border: 1px solid #dce6f0;
@@ -328,11 +336,8 @@
       font-family: 'Montserrat', sans-serif;
     }
 
-    .course-level.intermediate { background: #fff3db; color: #9e6d00; border-color: #f5ddb0; }
-    .course-level.pro { background: #f0e6ff; color: #5e3a8a; border-color: #dcc8f0; }
-
     .course-desc {
-      color: #2f4a66;
+      color: #2a5a5a;
       font-size: 0.95rem;
       line-height: 1.6;
       margin: 0.2rem 0 1.4rem 0;
@@ -346,7 +351,6 @@
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
-      border-top: 1px solid #eaf0f6;
       padding-top: 1.4rem;
       margin-top: 0.2rem;
       font-weight: 600;
@@ -357,32 +361,26 @@
       padding: 0.4rem 1.4rem;
       border-radius: 60px;
       font-weight: 700;
-      border: 1px solid rgba(10, 42, 106, 0.06);
+      border: 1px solid rgba(224, 122, 95, 0.20);
       font-size: 0.9rem;
+      color: #1a4a4a;
     }
     .course-price i {
       margin-right: 6px;
     }
 
     .course-duration {
-      background: #f4f7fc;
       padding: 0.3rem 1.2rem;
       border-radius: 60px;
       font-size: 0.8rem;
-      color: #1f3d5a;
       display: flex;
       align-items: center;
       gap: 8px;
       font-weight: 500;
     }
-    .course-duration i {
-      color: #0a2a6a;
-    }
 
-    /* graphic highlight */
     .graphic-highlight {
       margin-top: 4rem;
-      background: white;
       border-radius: 36px;
       padding: 2.2rem 2.8rem;
       display: flex;
@@ -390,8 +388,6 @@
       align-items: center;
       justify-content: space-between;
       gap: 1.8rem;
-      box-shadow: 0 20px 40px -16px rgba(10, 42, 106, 0.05);
-      border: 1px solid rgba(255,255,255,0.6);
     }
 
     .graphic-highlight .graphic-text {
@@ -403,7 +399,6 @@
 
     .graphic-highlight .graphic-text i {
       font-size: 2.6rem;
-      background: #e8edf9;
       padding: 18px;
       border-radius: 30px;
     }
@@ -411,26 +406,24 @@
     .graphic-highlight .graphic-text h3 {
       font-size: 1.5rem;
       font-weight: 700;
-      color: #0a1a2b;
+      color: #1a4a4a;
       font-family: 'Montserrat', sans-serif;
     }
     .graphic-highlight .graphic-text p {
-      color: #2f4a66;
+      color: #2a5a5a;
       max-width: 460px;
       font-size: 0.95rem;
       font-family: 'Montserrat', sans-serif;
       font-weight: 400;
     }
     .graphic-highlight .graphic-text p span {
-      background: #e8edf9;
       padding: 0.1rem 0.6rem;
       border-radius: 20px;
-      color: #0a2a6a;
       font-weight: 600;
     }
 
     .badge-popular {
-      color: white;
+      color: #fff;
       padding: 0.6rem 2.2rem;
       border-radius: 80px;
       font-weight: 700;
@@ -441,11 +434,10 @@
       font-family: 'Montserrat', sans-serif;
     }
 
-    /* footer */
     .footer-note {
       margin-top: 4.2rem;
-      background: #0a1a2b;
-      color: #dce6f0;
+      background: #1a4a4a;
+      color: #dce8e8;
       padding: 2.2rem 3rem;
       border-radius: 40px;
       display: flex;
@@ -469,14 +461,13 @@
     }
 
     .footer-note .contact-foot a {
-      color: #dce6f0;
+      color: #dce8e8;
       text-decoration: none;
     }
     .footer-note .contact-foot a:hover {
-      color: #6688cc;
+      color: #f0a68a;
     }
 
-    /* animations */
     @keyframes fadeUp {
       0% { opacity: 0; transform: translateY(20px); }
       100% { opacity: 1; transform: translateY(0); }
@@ -501,7 +492,6 @@
     .course-card:nth-child(17) { animation-delay: 0.66s; }
     .course-card:nth-child(18) { animation-delay: 0.70s; }
 
-    /* responsiveness */
     @media (max-width: 900px) {
       body { padding: 2rem 1.5rem; }
       .brand-header { flex-direction: column; align-items: center; gap: 1.2rem; }
