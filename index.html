@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GINTACAD · Courses</title>
+  <title>GINTACAD · Digital Skills Academy</title>
   <!-- Google Font: Montserrat -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -32,7 +32,106 @@
       width: 100%;
     }
 
-    /* ----- brand header (full saturated blue) ----- */
+    /* ----- DARKER BRAND COLOR: #0a2a6a (deep navy blue) ----- */
+    .brand-name span,
+    .brand-contact i,
+    .location-badge,
+    .tagline h2 i,
+    .section-title i,
+    .course-icon,
+    .course-price,
+    .course-price i,
+    .course-duration i,
+    .graphic-highlight .graphic-text i,
+    .footer-note .brand-footer span,
+    .footer-note .copy i,
+    .footer-note .contact-foot i {
+      color: #0a2a6a;
+    }
+
+    .brand-contact .location-badge {
+      color: #0a2a6a;
+      border-color: rgba(10, 42, 106, 0.15);
+      background: #e8edf9;
+    }
+
+    .course-level.basic {
+      background: #e8edf9;
+      color: #0a2a6a;
+      border-color: #b3c4e0;
+    }
+
+    .course-price {
+      background: #e8edf9;
+      border-color: rgba(10, 42, 106, 0.08);
+    }
+
+    .course-icon {
+      background: #e8edf9;
+    }
+    .course-card:hover .course-icon {
+      background: #0a2a6a;
+      color: white;
+    }
+
+    .badge-popular {
+      background: #0a2a6a;
+      box-shadow: 0 10px 20px -6px rgba(10, 42, 106, 0.30);
+    }
+
+    .footer-note .brand-footer span {
+      color: #6688cc;
+    }
+    .footer-note .copy i,
+    .footer-note .contact-foot i {
+      color: #6688cc;
+    }
+
+    /* override hover for brand-contact links */
+    .brand-contact a:hover {
+      color: #0a2a6a;
+    }
+
+    /* border-bottom */
+    .brand-header {
+      border-bottom-color: rgba(10, 42, 106, 0.10);
+    }
+
+    /* tagline icon background */
+    .tagline h2 i {
+      background: #e8edf9;
+    }
+
+    /* section title icon */
+    .section-title i {
+      background: #e8edf9;
+    }
+
+    .course-card:hover {
+      border-color: rgba(10, 42, 106, 0.12);
+      box-shadow: 0 40px 70px -16px rgba(10, 42, 106, 0.12);
+    }
+
+    /* brand header, contact badge stays dark */
+    .brand-contact {
+      border-color: rgba(255, 255, 255, 0.8);
+      box-shadow: 0 10px 30px -8px rgba(10, 42, 106, 0.06);
+    }
+
+    .graphic-highlight .graphic-text i {
+      background: #e8edf9;
+    }
+
+    .graphic-highlight {
+      border-color: rgba(255, 255, 255, 0.6);
+    }
+
+    /* location badge */
+    .location-badge i {
+      color: #0a2a6a;
+    }
+
+    /* ----- rest of styling (unchanged, but keep consistent) ----- */
     .brand-header {
       display: flex;
       flex-wrap: wrap;
@@ -40,7 +139,7 @@
       align-items: center;
       margin-bottom: 3.2rem;
       padding-bottom: 1.8rem;
-      border-bottom: 1px solid rgba(0, 0, 255, 0.10);
+      border-bottom: 1px solid rgba(10, 42, 106, 0.10);
     }
 
     .brand-left {
@@ -57,7 +156,6 @@
       font-family: 'Montserrat', sans-serif;
     }
     .brand-name span {
-      color: #0000ff;
       font-weight: 800;
     }
 
@@ -71,13 +169,12 @@
       padding: 0.6rem 2rem 0.6rem 2rem;
       border-radius: 60px;
       border: 1px solid rgba(255, 255, 255, 0.8);
-      box-shadow: 0 10px 30px -8px rgba(0, 0, 255, 0.06);
+      box-shadow: 0 10px 30px -8px rgba(10, 42, 106, 0.06);
       font-size: 0.95rem;
       font-family: 'Montserrat', sans-serif;
     }
 
     .brand-contact i {
-      color: #0000ff;
       width: 1.5rem;
       font-size: 1.1rem;
     }
@@ -88,25 +185,24 @@
       font-weight: 600;
       transition: color 0.2s;
     }
-    .brand-contact a:hover { color: #0000ff; }
+    .brand-contact a:hover { color: #0a2a6a; }
 
     .location-badge {
-      background: #e6e6ff;
+      background: #e8edf9;
       padding: 0.3rem 1.4rem;
       border-radius: 40px;
       font-weight: 600;
-      color: #0000ff;
-      border: 1px solid rgba(0, 0, 255, 0.10);
+      border: 1px solid rgba(10, 42, 106, 0.10);
       font-size: 0.9rem;
     }
 
-    /* ----- tagline (full saturated blue accent) ----- */
+    /* tagline */
     .tagline {
-      background: linear-gradient(135deg, #ffffff, #f0f0ff);
+      background: linear-gradient(135deg, #ffffff, #f0f4fc);
       padding: 2.6rem 3rem;
       border-radius: 36px;
       margin-bottom: 3.2rem;
-      box-shadow: 0 20px 40px -12px rgba(0, 0, 255, 0.06);
+      box-shadow: 0 20px 40px -12px rgba(10, 42, 106, 0.06);
     }
 
     .tagline h2 {
@@ -117,9 +213,7 @@
       font-family: 'Montserrat', sans-serif;
     }
     .tagline h2 i {
-      color: #0000ff;
       margin-right: 14px;
-      background: #e6e6ff;
       padding: 10px 14px;
       border-radius: 40px;
       font-size: 1.6rem;
@@ -133,8 +227,15 @@
       line-height: 1.6;
       font-family: 'Montserrat', sans-serif;
     }
+    .tagline p span {
+      background: #e8edf9;
+      padding: 0.2rem 0.8rem;
+      border-radius: 40px;
+      font-weight: 600;
+      color: #0a2a6a;
+    }
 
-    /* ----- section title ----- */
+    /* section title */
     .section-title {
       display: flex;
       align-items: center;
@@ -146,8 +247,6 @@
       font-family: 'Montserrat', sans-serif;
     }
     .section-title i {
-      color: #0000ff;
-      background: #e6e6ff;
       padding: 12px 14px;
       border-radius: 20px;
       font-size: 1.5rem;
@@ -159,19 +258,18 @@
       margin-left: 10px;
     }
 
-    /* ----- course grid (more spacing) ----- */
+    /* course grid */
     .course-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
       gap: 2.4rem;
     }
 
-    /* card – pure white, shadow only, NO colored edge */
     .course-card {
       background: #ffffff;
       border-radius: 32px;
       padding: 2rem 1.8rem 1.8rem 1.8rem;
-      box-shadow: 0 20px 40px -12px rgba(0, 0, 255, 0.08), 0 6px 18px rgba(0, 0, 0, 0.02);
+      box-shadow: 0 20px 40px -12px rgba(10, 42, 106, 0.08), 0 6px 18px rgba(0, 0, 0, 0.02);
       transition: all 0.35s cubic-bezier(0.2, 0, 0, 1);
       border: 1px solid rgba(255, 255, 255, 0.3);
       display: flex;
@@ -185,16 +283,12 @@
 
     .course-card:hover {
       transform: translateY(-10px) scale(1.01);
-      box-shadow: 0 40px 70px -16px rgba(0, 0, 255, 0.12);
-      border-color: rgba(0, 0, 255, 0.08);
+      box-shadow: 0 40px 70px -16px rgba(10, 42, 106, 0.12);
+      border-color: rgba(10, 42, 106, 0.08);
     }
-
-    /* REMOVED any colored edge / after pseudo-element */
 
     .course-icon {
       font-size: 2.6rem;
-      color: #0000ff;
-      background: #e6e6ff;
       width: 72px;
       height: 72px;
       display: flex;
@@ -205,8 +299,6 @@
       transition: 0.2s;
     }
     .course-card:hover .course-icon {
-      background: #0000ff;
-      color: white;
       transform: rotate(-4deg) scale(1.02);
     }
 
@@ -236,7 +328,6 @@
       font-family: 'Montserrat', sans-serif;
     }
 
-    .course-level.basic { background: #e6e6ff; color: #0000ff; border-color: #b3b3ff; }
     .course-level.intermediate { background: #fff3db; color: #9e6d00; border-color: #f5ddb0; }
     .course-level.pro { background: #f0e6ff; color: #5e3a8a; border-color: #dcc8f0; }
 
@@ -263,17 +354,14 @@
     }
 
     .course-price {
-      background: #e6e6ff;
       padding: 0.4rem 1.4rem;
       border-radius: 60px;
       font-weight: 700;
-      color: #0000ff;
-      border: 1px solid rgba(0, 0, 255, 0.06);
+      border: 1px solid rgba(10, 42, 106, 0.06);
       font-size: 0.9rem;
     }
     .course-price i {
       margin-right: 6px;
-      color: #0000ff;
     }
 
     .course-duration {
@@ -288,10 +376,10 @@
       font-weight: 500;
     }
     .course-duration i {
-      color: #0000ff;
+      color: #0a2a6a;
     }
 
-    /* ---- extra graphic highlight (popular) ---- */
+    /* graphic highlight */
     .graphic-highlight {
       margin-top: 4rem;
       background: white;
@@ -302,7 +390,7 @@
       align-items: center;
       justify-content: space-between;
       gap: 1.8rem;
-      box-shadow: 0 20px 40px -16px rgba(0, 0, 255, 0.05);
+      box-shadow: 0 20px 40px -16px rgba(10, 42, 106, 0.05);
       border: 1px solid rgba(255,255,255,0.6);
     }
 
@@ -315,8 +403,7 @@
 
     .graphic-highlight .graphic-text i {
       font-size: 2.6rem;
-      color: #0000ff;
-      background: #e6e6ff;
+      background: #e8edf9;
       padding: 18px;
       border-radius: 30px;
     }
@@ -334,9 +421,15 @@
       font-family: 'Montserrat', sans-serif;
       font-weight: 400;
     }
+    .graphic-highlight .graphic-text p span {
+      background: #e8edf9;
+      padding: 0.1rem 0.6rem;
+      border-radius: 20px;
+      color: #0a2a6a;
+      font-weight: 600;
+    }
 
     .badge-popular {
-      background: #0000ff;
       color: white;
       padding: 0.6rem 2.2rem;
       border-radius: 80px;
@@ -345,11 +438,10 @@
       display: flex;
       align-items: center;
       gap: 10px;
-      box-shadow: 0 10px 20px -6px rgba(0, 0, 255, 0.25);
       font-family: 'Montserrat', sans-serif;
     }
 
-    /* ----- footer premium (full saturated blue) ----- */
+    /* footer */
     .footer-note {
       margin-top: 4.2rem;
       background: #0a1a2b;
@@ -369,25 +461,22 @@
       opacity: 0.75;
       font-weight: 400;
     }
-    .footer-note .copy i {
-      color: #6666ff;
-    }
 
     .footer-note .brand-footer {
       font-weight: 700;
       font-size: 1.1rem;
       letter-spacing: -0.3px;
     }
-    .footer-note .brand-footer span {
-      color: #6666ff;
+
+    .footer-note .contact-foot a {
+      color: #dce6f0;
+      text-decoration: none;
+    }
+    .footer-note .contact-foot a:hover {
+      color: #6688cc;
     }
 
-    .footer-note .contact-foot i {
-      color: #6666ff;
-      margin-right: 10px;
-    }
-
-    /* ----- animations ----- */
+    /* animations */
     @keyframes fadeUp {
       0% { opacity: 0; transform: translateY(20px); }
       100% { opacity: 1; transform: translateY(0); }
@@ -412,7 +501,7 @@
     .course-card:nth-child(17) { animation-delay: 0.66s; }
     .course-card:nth-child(18) { animation-delay: 0.70s; }
 
-    /* ----- responsiveness (highly responsive) ----- */
+    /* responsiveness */
     @media (max-width: 900px) {
       body { padding: 2rem 1.5rem; }
       .brand-header { flex-direction: column; align-items: center; gap: 1.2rem; }
@@ -434,13 +523,12 @@
       .tagline h2 { font-size: 1.3rem; }
       .tagline p { font-size: 0.9rem; }
     }
-    
   </style>
 </head>
 <body>
 <div class="container">
 
-  <!-- header: only name + contact (no logo placeholder) -->
+  <!-- header -->
   <header class="brand-header">
     <div class="brand-left">
       <div class="brand-name">GINT<span>ACAD</span></div>
@@ -454,25 +542,25 @@
 
   <!-- tagline -->
   <div class="tagline">
-    <h2><i class="fas fa-graduation-cap"></i> Learn Digital skills - from beginner to pro</h2>
-    <p>GINTACAD trains you in <strong>Digital Skills</strong> with structured levels: Basic, Intermediate, and Pro. Build real-world skills Today...</p>
+    <h2><i class="fas fa-graduation-cap"></i> Digital Skills for the African Market</h2>
+    <p><strong>GINTACAD</strong> offers structured, practical training in <strong>Graphics Design, Web Development, Cyber Security, Data Science, Cloud Computing, and UI/UX Design</strong>. From Basic to Pro, we build job-ready professionals. <span>★ 30+ students trained</span></p>
   </div>
 
-  <!-- ===== COURSES ===== (expanded with new courses) -->
+  <!-- courses -->
   <div class="section-title">
-    <i class="fas fa-code"></i> Our courses
+    <i class="fas fa-code"></i> Our Courses <small>– tailored for Nigeria</small>
   </div>
 
   <div class="course-grid">
 
-    <!-- 1. Graphics Design (3 levels) -->
+    <!-- Graphics Design (3) -->
     <div class="course-card">
       <div class="course-icon"><i class="fas fa-palette"></i></div>
       <div class="course-title">Graphics Design</div>
       <span class="course-level basic">Basic</span>
       <div class="course-desc">Canva, Photoshop, Illustrator essentials. Flyers, logos, social media graphics.</div>
       <div class="course-meta">
-        <span class="course-price"><i class="fas fa-naira-sign"></i> 85,000</span>
+        <span class="course-price"><i class="fas fa-naira-sign"></i> 50,000</span>
         <span class="course-duration"><i class="far fa-clock"></i> 6 wks</span>
       </div>
     </div>
@@ -483,7 +571,7 @@
       <span class="course-level intermediate">Intermediate</span>
       <div class="course-desc">Advanced Photoshop, branding, typography, motion graphics, portfolio projects.</div>
       <div class="course-meta">
-        <span class="course-price"><i class="fas fa-naira-sign"></i> 150,000</span>
+        <span class="course-price"><i class="fas fa-naira-sign"></i> 100,000</span>
         <span class="course-duration"><i class="far fa-clock"></i> 8 wks</span>
       </div>
     </div>
@@ -494,19 +582,19 @@
       <span class="course-level pro">Pro</span>
       <div class="course-desc">Design leadership, 3D, UI/UX advanced, design systems, client management.</div>
       <div class="course-meta">
-        <span class="course-price"><i class="fas fa-naira-sign"></i> 220,000</span>
+        <span class="course-price"><i class="fas fa-naira-sign"></i> 250,000</span>
         <span class="course-duration"><i class="far fa-clock"></i> 10 wks</span>
       </div>
     </div>
 
-    <!-- 2. Web Development (3 levels) -->
+    <!-- Web Development (3) -->
     <div class="course-card">
       <div class="course-icon"><i class="fab fa-html5"></i></div>
       <div class="course-title">Web Development</div>
       <span class="course-level basic">Basic</span>
       <div class="course-desc">HTML, CSS, JS essentials. responsive sites, Git, hosting.</div>
       <div class="course-meta">
-        <span class="course-price"><i class="fas fa-naira-sign"></i> 95,000</span>
+        <span class="course-price"><i class="fas fa-naira-sign"></i> 50,000</span>
         <span class="course-duration"><i class="far fa-clock"></i> 6 wks</span>
       </div>
     </div>
@@ -517,7 +605,7 @@
       <span class="course-level intermediate">Intermediate</span>
       <div class="course-desc">React, Node.js, Express, MongoDB. Full-stack apps, APIs, auth.</div>
       <div class="course-meta">
-        <span class="course-price"><i class="fas fa-naira-sign"></i> 180,000</span>
+        <span class="course-price"><i class="fas fa-naira-sign"></i> 100,000</span>
         <span class="course-duration"><i class="far fa-clock"></i> 10 wks</span>
       </div>
     </div>
@@ -528,19 +616,19 @@
       <span class="course-level pro">Pro</span>
       <div class="course-desc">Microservices, GraphQL, CI/CD, performance, security, team collaboration.</div>
       <div class="course-meta">
-        <span class="course-price"><i class="fas fa-naira-sign"></i> 280,000</span>
+        <span class="course-price"><i class="fas fa-naira-sign"></i> 250,000</span>
         <span class="course-duration"><i class="far fa-clock"></i> 12 wks</span>
       </div>
     </div>
 
-    <!-- 3. Cyber Security (3 levels) -->
+    <!-- Cyber Security (3) -->
     <div class="course-card">
       <div class="course-icon"><i class="fas fa-shield-alt"></i></div>
       <div class="course-title">Cyber Security</div>
       <span class="course-level basic">Basic</span>
       <div class="course-desc">Security fundamentals, threat landscape, network basics, safe browsing.</div>
       <div class="course-meta">
-        <span class="course-price"><i class="fas fa-naira-sign"></i> 90,000</span>
+        <span class="course-price"><i class="fas fa-naira-sign"></i> 50,000</span>
         <span class="course-duration"><i class="far fa-clock"></i> 6 wks</span>
       </div>
     </div>
@@ -551,7 +639,7 @@
       <span class="course-level intermediate">Intermediate</span>
       <div class="course-desc">Ethical hacking, pentesting, vulnerability assessment, SIEM tools.</div>
       <div class="course-meta">
-        <span class="course-price"><i class="fas fa-naira-sign"></i> 170,000</span>
+        <span class="course-price"><i class="fas fa-naira-sign"></i> 100,000</span>
         <span class="course-duration"><i class="far fa-clock"></i> 8 wks</span>
       </div>
     </div>
@@ -562,19 +650,19 @@
       <span class="course-level pro">Pro</span>
       <div class="course-desc">Red/blue team, cloud security, incident response, forensics, compliance.</div>
       <div class="course-meta">
-        <span class="course-price"><i class="fas fa-naira-sign"></i> 260,000</span>
+        <span class="course-price"><i class="fas fa-naira-sign"></i> 250,000</span>
         <span class="course-duration"><i class="far fa-clock"></i> 10 wks</span>
       </div>
     </div>
 
-    <!-- 4. NEW: Data Science (3 levels) -->
+    <!-- Data Science (3) -->
     <div class="course-card">
       <div class="course-icon"><i class="fas fa-chart-bar"></i></div>
       <div class="course-title">Data Science</div>
       <span class="course-level basic">Basic</span>
       <div class="course-desc">Python, pandas, data visualization, statistics, Jupyter notebooks.</div>
       <div class="course-meta">
-        <span class="course-price"><i class="fas fa-naira-sign"></i> 110,000</span>
+        <span class="course-price"><i class="fas fa-naira-sign"></i> 50,000</span>
         <span class="course-duration"><i class="far fa-clock"></i> 7 wks</span>
       </div>
     </div>
@@ -585,7 +673,7 @@
       <span class="course-level intermediate">Intermediate</span>
       <div class="course-desc">Machine learning, scikit-learn, regression, clustering, feature engineering.</div>
       <div class="course-meta">
-        <span class="course-price"><i class="fas fa-naira-sign"></i> 200,000</span>
+        <span class="course-price"><i class="fas fa-naira-sign"></i> 100,000</span>
         <span class="course-duration"><i class="far fa-clock"></i> 10 wks</span>
       </div>
     </div>
@@ -596,19 +684,19 @@
       <span class="course-level pro">Pro</span>
       <div class="course-desc">Deep learning, TensorFlow, NLP, big data, deployment, MLOps.</div>
       <div class="course-meta">
-        <span class="course-price"><i class="fas fa-naira-sign"></i> 300,000</span>
+        <span class="course-price"><i class="fas fa-naira-sign"></i> 250,000</span>
         <span class="course-duration"><i class="far fa-clock"></i> 12 wks</span>
       </div>
     </div>
 
-    <!-- 5. NEW: Cloud Computing (3 levels) -->
+    <!-- Cloud Computing (3) -->
     <div class="course-card">
       <div class="course-icon"><i class="fas fa-cloud"></i></div>
       <div class="course-title">Cloud Computing</div>
       <span class="course-level basic">Basic</span>
       <div class="course-desc">AWS/Azure fundamentals, IAM, EC2, S3, cloud concepts, CLI.</div>
       <div class="course-meta">
-        <span class="course-price"><i class="fas fa-naira-sign"></i> 100,000</span>
+        <span class="course-price"><i class="fas fa-naira-sign"></i> 50,000</span>
         <span class="course-duration"><i class="far fa-clock"></i> 6 wks</span>
       </div>
     </div>
@@ -619,7 +707,7 @@
       <span class="course-level intermediate">Intermediate</span>
       <div class="course-desc">VPC, load balancing, auto-scaling, containers (Docker, Kubernetes).</div>
       <div class="course-meta">
-        <span class="course-price"><i class="fas fa-naira-sign"></i> 190,000</span>
+        <span class="course-price"><i class="fas fa-naira-sign"></i> 100,000</span>
         <span class="course-duration"><i class="far fa-clock"></i> 9 wks</span>
       </div>
     </div>
@@ -630,19 +718,19 @@
       <span class="course-level pro">Pro</span>
       <div class="course-desc">Multi-cloud, Terraform, serverless, cloud security, cost optimization.</div>
       <div class="course-meta">
-        <span class="course-price"><i class="fas fa-naira-sign"></i> 290,000</span>
+        <span class="course-price"><i class="fas fa-naira-sign"></i> 250,000</span>
         <span class="course-duration"><i class="far fa-clock"></i> 12 wks</span>
       </div>
     </div>
 
-    <!-- 6. NEW: UI/UX Design (3 levels) -->
+    <!-- UI/UX Design (3) -->
     <div class="course-card">
       <div class="course-icon"><i class="fas fa-pencil-ruler"></i></div>
       <div class="course-title">UI/UX Design</div>
       <span class="course-level basic">Basic</span>
       <div class="course-desc">Design thinking, wireframing, Figma, user flows, prototyping.</div>
       <div class="course-meta">
-        <span class="course-price"><i class="fas fa-naira-sign"></i> 80,000</span>
+        <span class="course-price"><i class="fas fa-naira-sign"></i> 50,000</span>
         <span class="course-duration"><i class="far fa-clock"></i> 5 wks</span>
       </div>
     </div>
@@ -653,7 +741,7 @@
       <span class="course-level intermediate">Intermediate</span>
       <div class="course-desc">User research, usability testing, interaction design, design systems.</div>
       <div class="course-meta">
-        <span class="course-price"><i class="fas fa-naira-sign"></i> 160,000</span>
+        <span class="course-price"><i class="fas fa-naira-sign"></i> 100,000</span>
         <span class="course-duration"><i class="far fa-clock"></i> 8 wks</span>
       </div>
     </div>
@@ -671,32 +759,30 @@
 
   </div> <!-- end grid -->
 
-  <!-- graphic highlight / popular in nigeria -->
+  <!-- graphic highlight -->
   <div class="graphic-highlight">
     <div class="graphic-text">
       <i class="fas fa-chart-line"></i>
       <div>
-        <h3>🔥 Most popular</h3>
-        <p><strong>Digital Skills</strong> — tailored for the Nigerian and African market, with practical projects and job-ready skills.</p>
+        <h3>🔥 Most popular · Nigerian market</h3>
+        <p><strong>Digital Skills</strong> tailored for the African context. Practical projects, job-ready skills. <span>30+ students trained</span></p>
       </div>
     </div>
     <div class="badge-popular">
-      <i class="fas fa-star"></i> 800+ students
+      <i class="fas fa-star"></i> 800+ students (projected)
     </div>
   </div>
 
-  <!-- footer premium -->
+  <!-- footer -->
   <footer class="footer-note">
-    <div class="brand-footer"><span>GINT</span>ACAD · Owerri, Nigeria</div>
+    <div class="brand-footer"><span>GINT</span>ACAD · PAC College, Egbeada</div>
     <div class="copy">
-      <i class="far fa-copyright"></i> 2026 · premium digital training
+      <i class="far fa-copyright"></i> 2026 · GINT LTD
     </div>
     <div class="contact-foot">
-      <i class="fas fa-phone-alt"></i> <a href="tel:+2348169806632" style="color: #dce6f0; text-decoration: none;">+234 816 980 6632</a>
+      <i class="fas fa-phone-alt"></i> <a href="tel:+2348169806632">+234 816 980 6632</a>
     </div>
   </footer>
-
- 
 
 </div>
 </body>
